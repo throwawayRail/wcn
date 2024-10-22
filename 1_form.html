@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form</title>
+</head>
+
+<body>
+  <form action="#" method="POST">
+    <!-- Name field -->
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" placeholder="Enter your name" maxlength="25" required /><br /><br />
+
+    <!-- Email field -->
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" value="test@example.com" required autofocus /><br /><br />
+
+    <!-- Password field -->
+    <label for="password">Password:</label><br />
+    <input type="password" id="password" name="password" minlength="6" required /><br /><br />
+
+    <!-- Category field -->
+    <label for="category">Category:</label><br />
+    <select id="category" name="category" required>
+      <option value="student">Student</option>
+      <option value="employee">Employee</option>
+      <option value="freelancer" selected>Freelancer</option>
+    </select><br /><br />
+
+    <!-- Event Date field -->
+    <label for="event_date">Event Date:</label><br />
+    <input type="date" id="event_date" name="event_date" required /><br /><br />
+
+    <!-- Tickets field -->
+    <label>Tickets:</label><br />
+    <input type="radio" id="ticket1" name="tickets" value="1" required />
+    <label for="ticket1">1 ticket</label><br />
+    <input type="radio" id="ticket2" name="tickets" value="2" required checked />
+    <label for="ticket2">2 tickets</label><br />
+    <input type="radio" id="ticket3" name="tickets" value="3" required />
+    <label for="ticket3">3 tickets</label><br /><br />
+
+    <!-- Online Payment field -->
+    <label for="payment">Online Payment:</label>
+    <input type="checkbox" id="payment" name="payment" /><br /><br />
+
+    <!-- Notes field -->
+    <label for="notes">Notes:</label><br />
+    <textarea id="notes" name="notes" placeholder="Enter additional notes"></textarea><br /><br />
+
+    <!-- Submit button -->
+    <button type="submit">Submit</button>
+  </form>
+</body>
+
+</html>

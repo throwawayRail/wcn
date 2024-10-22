@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File Upload</title>
+</head>
+
+<body>
+  <h1>Upload File</h1>
+
+  <!-- Form to upload file -->
+  <form id="uploadForm" enctype="multipart/form-data">
+    <input type="file" id="fileInput" name="file" required />
+    <button type="submit">Upload</button>
+  </form>
+
+  <!-- Status message -->
+  <p id="status"></p>
+
+  <script>
+    document.getElementById("uploadForm").onsubmit = async function (event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Get the file input
+      const fileInput = document.getElementById("fileInput");
+      const file = fileInput.files[0];
+
+      // Create a FormData object to hold the file data
+      const formData = new FormData();
+      formData.append("file", file);
+
+      try {
+        // Send the file to the server via POST request
+        const response = await fetch("http://127.0.0.1:3000/upload", {
+          method: "POST",
+          body: formData,
+        });
+
+        // Display status based on server response
+        const result = await response.text();
+        document.getElementById("status").innerText = result;
+      } catch (error) {
+        document.getElementById("status").innerText =
+          "Error: " + error.message;
+      }
+    };
+  </script>
+</body>
+
+</html>

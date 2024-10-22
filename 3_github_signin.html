@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Sign In Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="row justify-content-center w-100">
+            <div class="col-lg-5 col-md-6 col-sm-8 col-12">
+                <div class="card p-4 shadow-sm">
+                    <!-- GitHub-like logo (you can replace with actual logo image) -->
+                    <div class="text-center mb-4">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="72">
+                    </div>
+
+                    <!-- Sign In Form -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username or email address</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter your username or email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">
+                                    Remember me
+                                </label>
+                            </div>
+                            <a href="#" class="text-decoration-none">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100">Sign in</button>
+                    </form>
+
+                    <!-- Create Account link -->
+                    <div class="mt-4 text-center">
+                        <p class="mb-0">New to GitHub? <a href="#" class="text-decoration-none">Create an account</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

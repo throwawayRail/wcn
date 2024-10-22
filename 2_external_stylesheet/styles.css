@@ -1,0 +1,28 @@
+/* i. Web page background image */
+body {
+  background-image: url("img1.jpg");
+  background-size: cover; /* Ensures the background image covers the entire page */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ii. Table heading background color */
+th {
+  background-color: red;
+  color: white; /* Optional: Makes text in table headers easier to read */
+}
+
+/* iii. Alternate background color for paragraphs */
+p:nth-of-type(odd) {
+  background-color: lightgray; /* Background color for odd paragraphs */
+}
+
+p:nth-of-type(even) {
+  background-color: lightblue; /* Background color for even paragraphs */
+}
+
+/* iv. Hyperlinks without underline */
+a {
+  text-decoration: none;
+  color: blue; /* Optional: To maintain the default link color */
+}
